@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <meta
+      name="description"
+      content="Read a full article from Moses Blog."
+    />
+
+    <title>View Post | Moses Blog</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-container">
+        <a href="index.html" class="logo">Moses Blog</a>
+
+        <nav class="navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html#blog-posts" class="active">Blog</a>
+          <a href="index.html#about">About</a>
+
+          <a href="create-post.html" class="create-button">
+            Create Post
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="view-post-section">
+        <div class="container">
+          <a href="index.html#blog-posts" class="back-link">
+            ← Back to all posts
+          </a>
+
+          <article id="post-detail" class="post-detail">
+            <p>Loading post...</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-container">
+        <p>
+          &copy;
+          <span id="current-year"></span>
+          Moses Blog.
+        </p>
+
+        <p>Built with HTML, CSS and JavaScript.</p>
+      </div>
+    </footer>
+
+    <script src="view-post.js"></script>
+  </body>
+</html>

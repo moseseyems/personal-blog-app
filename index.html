@@ -1,1 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <meta
+      name="description"
+      content="A personal blog application built with HTML, CSS and JavaScript"
+    />
+
+    <title>My Personal Blog</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-container">
+        <a href="index.html" class="logo">Moses Blog</a>
+
+        <nav class="navigation">
+          <a href="index.html" class="active">Home</a>
+          <a href="#blog-posts">Blog</a>
+          <a href="#about">About</a>
+          <a href="create-post.html" class="create-button">
+            Create Post
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-content">
+          <p class="hero-label">Personal Blog</p>
+
+          <h1>Thoughts, stories and ideas worth sharing.</h1>
+
+          <p class="hero-description">
+            A simple space where I write about life, learning,
+            technology and personal development.
+          </p>
+
+          <a href="#blog-posts" class="primary-button">
+            Explore Posts
+          </a>
+        </div>
+      </section>
+
+      <section class="featured-section">
+        <div class="container">
+          <p class="section-label">Featured Story</p>
+
+          <article id="featured-post" class="featured-post">
+
+          </article>
+        </div>
+      </section>
+
+      <section id="blog-posts" class="blog-section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="section-label">Latest Articles</p>
+              <h2>From the blog</h2>
+            </div>
+
+            <a href="create-post.html" class="secondary-button">
+              Add New Post
+            </a>
+          </div>
+
+          <div class="blog-controls">
+            <div class="search-container">
+              <label for="search-input">Search posts</label>
+
+              <input
+                type="search"
+                id="search-input"
+                placeholder="Search by title or content..."
+              />
+            </div>
+
+            <div class="filter-container">
+              <label for="category-filter">Category</label>
+
+              <select id="category-filter">
+                <option value="all">All categories</option>
+                <option value="Lifestyle">Lifestyle</option>
+                <option value="Technology">Technology</option>
+                <option value="Learning">Learning</option>
+                <option value="Business">Business</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="blog-list" class="blog-grid"></div>
+
+          <div id="empty-message" class="empty-message hidden">
+            <h3>No blog posts found</h3>
+
+            <p>
+              Create your first post or try changing your search.
+            </p>
+
+            <a href="create-post.html" class="primary-button">
+              Create a Post
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <div class="container about-container">
+          <div>
+            <p class="section-label">About the writer</p>
+            <h2>Hello, I'm Moses.</h2>
+          </div>
+
+          <p>
+            I use this blog to document what I am learning, share
+            useful experiences and explore ideas about technology,
+            business and personal development.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-container">
+        <p>&copy; <span id="current-year"></span> Moses Blog.</p>
+
+        <p>Built with HTML, CSS and JavaScript.</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

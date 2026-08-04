@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Edit Post | Moses Blog</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container header-container">
+
+      <a href="index.html" class="logo">Moses Blog</a>
+
+      <nav class="navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#blog-posts">Blog</a>
+        <a href="index.html#about">About</a>
+        <a href="create-post.html" class="create-button">Create Post</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <div class="container">
+
+        <a href="index.html#blog-posts" class="back-link">
+          ← Back to all posts
+        </a>
+
+        <div class="form-container">
+
+          <h1>Edit Post</h1>
+
+          <form id="edit-post-form">
+
+            <div class="form-group">
+              <label for="title">Post title</label>
+              <input type="text" id="title" required>
+            </div>
+
+            <div class="form-group">
+              <label for="author">Author</label>
+              <input type="text" id="author" required>
+            </div>
+
+            <div class="form-group">
+              <label for="date">Published date</label>
+              <input type="date" id="date" required>
+            </div>
+
+            <div class="form-group">
+              <label for="category">Category</label>
+              <input type="text" id="category" required>
+            </div>
+
+            <div class="form-group">
+                <label>Current image</label>
+
+                <img
+                    id="current-image"
+                    src=""
+                    alt="Current post image"
+                    class="edit-image-preview"
+                />
+                </div>
+
+                <div class="form-group">
+                <label for="image">Replace image</label>
+
+                <input
+                    type="file"
+                    id="image"
+                    accept="image/png, image/jpeg, image/webp"
+                />
+
+                <p class="form-help">
+                    Leave this empty to keep the current image.
+                </p>
+            </div>
+
+            <div class="form-group">
+              <label for="summary">Summary</label>
+              <textarea id="summary" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="content">Full content</label>
+              <textarea id="content" rows="10" required></textarea>
+            </div>
+
+            <button type="submit" class="create-button">
+              Update Post
+            </button>
+
+          </form>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p>© <span id="current-year"></span> Moses Blog.</p>
+      <p>Built with HTML, CSS and JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="edit-post.js"></script>
+
+</body>
+</html>
